@@ -1,0 +1,30 @@
+iniciar-programa
+
+define-nueva-instruccion amontona como inicio
+    mientras frente-libre y junto-a-zumbador hacer inicio
+  mientras junto-a-zumbador hacer coge-zumbador;
+ avanza;
+ si frente-bloqueado o no-junto-a-zumbador entonces inicio
+    mientras junto-a-zumbador hacer coge-zumbador;
+    gira-izquierda;
+    gira-izquierda;
+    mientras frente-libre hacer avanza;
+    mientras algun-zumbador-en-la-mochila hacer deja-zumbador;
+    gira-izquierda;
+    si frente-libre entonces inicio
+         avanza;
+         fin sino inicio
+             apagate;
+             fin
+             ;gira-izquierda;
+           fin;
+          fin;
+
+
+       fin;
+
+inicia-ejecucion
+     amontona;
+
+    termina-ejecucion
+    finalizar-programa

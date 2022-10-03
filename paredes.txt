@@ -1,0 +1,36 @@
+iniciar-programa
+define-nueva-instruccion coge-columna como inicio
+mientras junto-a-zumbador hacer inicio
+mientras junto-a-zumbador hacer coge-zumbador;
+avanza;
+fin;
+gira-izquierda;
+gira-izquierda;
+mientras frente-libre hacer avanza;
+gira-izquierda;
+fin;
+define-nueva-instruccion construye-pared como inicio
+mientras frente-libre hacer inicio deja-zumbador;
+avanza;
+fin;
+deja-zumbador;
+mientras no-orientado-al-oeste hacer gira-izquierda;
+mientras frente-libre hacer avanza;
+gira-izquierda;
+gira-izquierda;
+gira-izquierda;
+avanza;
+mientras no-orientado-al-este hacer gira-izquierda;
+fin; inicia-ejecucion mientras no-orientado-al-norte hacer gira-izquierda;
+mientras derecha-libre hacer inicio coge-columna;
+avanza;
+gira-izquierda;
+fin;
+coge-columna;
+mientras no-orientado-al-oeste hacer gira-izquierda;
+mientras frente-libre hacer avanza;
+mientras no-orientado-al-este hacer gira-izquierda;
+mientras algun-zumbador-en-la-mochila hacer construye-pared;
+apagate;
+termina-ejecucion
+finalizar-programa

@@ -1,0 +1,14 @@
+iniciar-programa
+inicia-ejecucion
+mientras no-junto-a-zumbador hacer inicio
+mientras frente-libre hacer
+avanza;
+si derecha-bloqueada entonces
+gira-izquierda
+sino
+repetir 3 veces
+gira-izquierda;
+fin;
+apagate;
+termina-ejecucion
+finalizar-programa

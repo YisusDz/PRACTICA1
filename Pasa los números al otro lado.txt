@@ -1,0 +1,59 @@
+iniciar-programa
+define-nueva-instruccion gira-derecha como inicio
+repetir 3 veces
+gira-izquierda;
+fin;
+
+define-nueva-instruccion recoge(n) como inicio
+repetir n veces
+si frente-libre entonces
+avanza;
+si junto-a-zumbador entonces inicio
+mientras junto-a-zumbador hacer
+coge-zumbador;
+mientras frente-libre hacer
+avanza;
+gira-izquierda;
+mientras derecha-bloqueada hacer
+avanza;
+gira-derecha;
+avanza;
+gira-derecha;
+mientras frente-libre hacer
+avanza;
+gira-izquierda;
+mientras junto-a-zumbador hacer
+avanza;
+mientras algun-zumbador-en-la-mochila hacer
+deja-zumbador;
+mientras no-orientado-al-oeste hacer
+gira-izquierda;
+mientras frente-libre hacer
+avanza;
+gira-derecha;
+mientras izquierda-bloqueada hacer
+avanza;
+gira-izquierda;
+avanza;
+gira-izquierda;
+mientras frente-libre hacer
+avanza;
+gira-derecha;
+mientras frente-libre hacer
+avanza;
+mientras no-orientado-al-este hacer
+gira-izquierda;
+
+recoge(sucede(n));
+fin
+sino
+apagate;
+
+fin;
+inicia-ejecucion
+mientras no-orientado-al-este hacer
+gira-izquierda;
+recoge(1);
+apagate;
+termina-ejecucion
+finalizar-programa

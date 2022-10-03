@@ -1,0 +1,92 @@
+iniciar-programa
+
+define-nueva-instruccion este como inicio 
+   mientras no-orientado-al-este hacer gira-izquierda;
+ fin;
+   
+define-nueva-instruccion norte como inicio
+   mientras no-orientado-al-norte hacer gira-izquierda;
+ fin;
+
+define-nueva-instruccion sur como inicio
+   mientras no-orientado-al-sur hacer gira-izquierda;
+ fin;
+   
+define-nueva-instruccion oeste como inicio
+   mientras no-orientado-al-oeste hacer gira-izquierda;
+ fin;
+
+define-nueva-instruccion recogetodo como inicio
+   mientras junto-a-zumbador hacer coge-zumbador;
+ fin;
+   
+define-nueva-instruccion camina como inicio
+   mientras frente-libre hacer avanza;
+ fin;
+
+define-nueva-instruccion ubicaterreno como inicio
+   mientras izquierda-bloqueada y no orientado-al-sur hacer inicio
+      avanza;
+      si izquierda-libre y orientado-al-este entonces inicio
+      norte;
+      avanza;
+    fin;  
+    si izquierda-libre y orientado-al-norte entonces inicio
+      oeste;
+      avanza;
+      sur;
+      camina;
+   fin;
+ fin;
+fin;
+
+
+
+
+define-nueva-instruccion sal como inicio
+   norte;
+   mientras izquierda-bloqueada y no-orientado-al-sur hacer inicio
+       avanza;
+       si izquierda-libre y orientado-al-norte entonces inicio
+       oeste;
+       avanza;
+       sur;
+       camina;
+       este;
+       avanza;
+       mientras algun-zumbador-en-la-mochila hacer deja-zumbador;
+       apagate;
+       fin;
+      fin; 
+     fin;
+     
+define-nueva-instruccion deja como inicio
+    norte;
+    mientras frente-libre hacer inicio
+    deja-zumbador;
+    avanza;
+  fin;
+  deja-zumbador;
+  sur;
+  camina;
+  oeste;
+  si frente-libre entonces inicio
+  avanza;
+  deja;
+ fin sino inicio
+    sal;
+    fin;
+   fin;
+   
+   
+   define-nueva-instruccion sembrar como inicio
+   este;
+   avanza;
+   recogetodo;
+   ubicaterreno;
+   deja;
+ fin;
+    inicia-ejecucion
+        sembrar;
+     termina-ejecucion
+    finalizar-programa
